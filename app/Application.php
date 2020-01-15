@@ -13,10 +13,11 @@
 				$class  = 'controllers\\'.$url[0].'Controller';
 			}
 
-			$view  = 'app\\views\\View';
-			$model = 'app\\models\\Model';
+			$view  = 'views\\View';
+			$model = 'models\\'.ucfirst($url[0]).'Model';
 
-			$controller = new $class();
+			$controller = new $class(new $view, new $model);
+			$controller->index();
 		}
 
 	}
