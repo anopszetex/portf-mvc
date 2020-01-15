@@ -1,6 +1,8 @@
 <?php  
-	
+	ob_start();
+
 	$autoload = function($class) {
+	$class    = str_replace('\\', '/', $class);
 		if(file_exists("app/$class.php")) {
 			include("app/$class.php");
 		} else {
@@ -12,4 +14,6 @@
 
 	$app = new Application();
 	$app->run();
+
+	ob_end_flush();
 ?>

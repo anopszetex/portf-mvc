@@ -8,7 +8,7 @@
 		}
 
 		public function index() {
-			echo 'testando!';
+			$this->view->render('home');
 		}
 
 	}

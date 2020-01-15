@@ -15,7 +15,7 @@
 
 			$view  = 'views\\View';
 			$model = 'models\\'.ucfirst($url[0]).'Model';
-
+			
 			$controller = new $class(new $view, new $model);
 			$controller->index();
 		}
