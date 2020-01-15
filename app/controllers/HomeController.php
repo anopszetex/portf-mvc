@@ -1,10 +1,14 @@
 <?php  
 	namespace controllers;
 
-	class HomeController {
+	class HomeController extends Controller {
 
-		function __construct() {
-			echo 'olá!!';
+		function __construct($view, $model) {
+			parent::__construct($view, $model);
+		}
+
+		public function index() {
+			echo 'testando!';
 		}
 
 	}
